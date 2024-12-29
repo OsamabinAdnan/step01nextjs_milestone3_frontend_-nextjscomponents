@@ -6,6 +6,7 @@ import React from 'react'
 import {PortableText} from '@portabletext/react'
 import AddComments from '@/app/components/AddComments';
 import AllComments from '@/app/components/AllComments';
+import { QueryParams } from 'next-sanity';
 
 export const revalidate = 30; //revalidate every 30 seconds
 
@@ -24,18 +25,16 @@ async function getData(slug:string) {
             }
         }[0]
     `;
-    const data = await client.fetch(query);
+    const params:QueryParams = {slug};
+    const data = await client.fetch(query, params);
     return data;
 }
 
-interface BlogArticleProps {
-    params: {
-        slug: string;
-    };
-}
 
-export default async function BlogArticle({params}:BlogArticleProps) {
-    const data:FullBlogArticle = await getData(params.slug);
+export default async function BlogArticle({params}:{params:{slug:string}}) {
+    const {slug} = await params;
+    const data:FullBlogArticle = await getData(slug);
+    
     
     
   return (
