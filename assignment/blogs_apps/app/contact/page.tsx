@@ -62,7 +62,7 @@ export default function ContactPage() {
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-semibold mb-4">Other Ways to Reach Us</h2>
           <p className="sm:text-lg text-sm">
-            <strong>Email:</strong> contact@techinsights.com
+            <strong>Email:</strong> contact@osamasblogs.com
           </p>
           <p className="sm:text-lg text-sm">
             <strong>Phone:</strong> +123 456 7890

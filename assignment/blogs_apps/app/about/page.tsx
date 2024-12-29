@@ -8,7 +8,7 @@ export default function AboutPage() {
           About Us
         </h1>
         <p className="text-lg leading-relaxed mb-6">
-          Welcome to <span className="font-semibold">Tech Insights</span>, your go-to destination for all things Artificial Intelligence (AI) and Information Technology (IT). Our mission is to bridge the gap between technology enthusiasts and groundbreaking advancements in AI and IT by providing insightful blogs, tutorials, and industry updates.
+          Welcome to <span className="font-semibold">Osama&#039;s Blogs</span>, your go-to destination for all things Artificial Intelligence (AI) and Information Technology (IT). Our mission is to bridge the gap between technology enthusiasts and groundbreaking advancements in AI and IT by providing insightful blogs, tutorials, and industry updates.
         </p>
         <h2 className="text-2xl font-semibold mb-4">Who We Are</h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -23,7 +23,7 @@ export default function AboutPage() {
         </ul>
         <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
         <p className="text-lg leading-relaxed mb-6">
-          At Tech Insights, we envision a future where knowledge about AI and IT is accessible to everyone. We aim to empower individuals and businesses to harness the power of technology to solve real-world problems and drive innovation.
+          At Osama&#039;s Blogs, we envision a future where knowledge about AI and IT is accessible to everyone. We aim to empower individuals and businesses to harness the power of technology to solve real-world problems and drive innovation.
         </p>
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4 text-center">Get in Touch</h2>
