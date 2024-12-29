@@ -10,7 +10,7 @@ import { QueryParams } from 'next-sanity';
 
 export const revalidate = 30; //revalidate every 30 seconds
 
-async function getStaticProps(slug:string) {
+async function getData(slug:string) {
     const query = `
         *[_type == 'blog' && slug.current == '${slug}'] {
             "currentSlug":slug.current,
@@ -30,15 +30,13 @@ async function getStaticProps(slug:string) {
     return data;
 }
 
-interface BlogArticleProps {
-    params: {
-        slug: string;
-    };
-}
 
-export default async function BlogArticle({params}:BlogArticleProps) {
-    const {slug} =  params;
-    const data:FullBlogArticle = await getStaticProps(slug);
+
+export default async function BlogArticle({params}:{params:Promise<{ slug: string }>}) {
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
+    const data:FullBlogArticle = await getData(slug);
+    
     
     
   return (
