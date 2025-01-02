@@ -3,7 +3,9 @@ import React from 'react'
 import { NewestProducts } from '../interface/interface'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
+
+export const revalidate = 20; //revalidate every 20 seconds
 
 async function getData() {
     const query = `

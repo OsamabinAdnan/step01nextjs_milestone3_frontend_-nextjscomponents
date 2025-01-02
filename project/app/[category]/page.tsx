@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export const revalidate = 30; //revalidate every 30 seconds
+export const revalidate = 20; //revalidate every 20 seconds
 
 async function getData(category:string) {
     const query = `

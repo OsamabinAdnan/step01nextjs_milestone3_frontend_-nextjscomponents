@@ -7,7 +7,7 @@ import { client } from '@/sanity/lib/client'
 import { Star, Truck } from 'lucide-react'
 import React from 'react'
 
-export const revalidate = 30; //revalidate every 30 seconds
+export const revalidate = 20; //revalidate every 20 seconds
 
 async function getData(slug:string) {
   const query = `
