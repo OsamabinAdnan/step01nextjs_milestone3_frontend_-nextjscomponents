@@ -35,7 +35,7 @@ export default async function ProductPage({params}:{params:Promise<{slug:string}
   const { slug } = resolvedParams;
   const data:FullProduct = await getData(slug);
   return (
-    <div className='mt-12'>
+    <div className='mt-32 mb-8'>
       <div className=' mx-auto max-w-[1440px] px-4 md:px-8'>
         {/* Images */}
         <div className='grid gap-8 grid-cols-1 md:grid-cols-2'>
