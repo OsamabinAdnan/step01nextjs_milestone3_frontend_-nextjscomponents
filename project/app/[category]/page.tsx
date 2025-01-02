@@ -32,7 +32,7 @@ export default async function CategoryPage({params}:{params:Promise<{category:st
     const { category } = resolvedParams;
     const data:NewestProducts[] = await getData(category);
   return (
-    <div className=''>
+    <div className='mt-12'>
     <div className='mx-auto max-w-[1440px] px-4 sm:px-6 py-16 lg:px-8'>
         <div className='flex justify-between items-center sm:gap-0 gap-2'>
             <h2 className='sm:text-4xl text-xl font-bold tracking-tight'>Our Products For {category}</h2>
