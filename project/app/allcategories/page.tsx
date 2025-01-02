@@ -40,7 +40,7 @@ const categories = [
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-screen  py-8">
+    <div className="min-h-screen  py-8 mt-24">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="sm:text-4xl text-xl font-bold tracking-tight mb-8">Our All Categories</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

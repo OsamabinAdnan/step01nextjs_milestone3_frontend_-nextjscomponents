@@ -30,7 +30,7 @@ async function getData() {
 export default async function Allproducts() {
     const data:NewestProducts[] = await getData()
   return (
-    <div className=''>
+    <div className='mt-16'>
     <div className='mx-auto max-w-[1440px] px-4 py-16 sm:px-6 sm:py-24 lg:px-8'>
         <div className='flex justify-between items-center sm:gap-0 gap-2'>
             <h2 className='sm:text-4xl text-xl font-bold tracking-tight'>Our All Products</h2>
