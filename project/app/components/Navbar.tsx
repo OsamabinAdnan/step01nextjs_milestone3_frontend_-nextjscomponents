@@ -17,13 +17,14 @@ const links = [
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    
     const pathname = usePathname()
-    const { handleCartClick } = useShoppingCart()
+    const {handleCartClick, cartCount}= useShoppingCart()
 
     return (
         <>
             <header className="fixed top-0 left-0 max-w-full w-full z-20 backdrop-blur-lg shadow-lg border-b py-2 px-4 sm:px-8">
-                <div className="flex items-center justify-between mx-auto max-w-full sm:flex-row flex-col gap-2">
+                <div className="flex items-center justify-between mx-auto max-w-full sm:flex-row flex-col gap-4">
                     {/* Main Logo */}
                     <Link href="/">
                         <h1 className="sm:text-4xl text-2xl font-bold">
@@ -62,10 +63,13 @@ export default function Navbar() {
                         ))}
                     </nav>
                     {/* Cart */}
-                    <div className="flex divide-x  gap-2">
+                    <div className=" relative">
                         <Button onClick={() => handleCartClick()}>
-                            <ShoppingCart />
+                            <ShoppingCart  className='text-lg '/>
                         </Button>
+                        <span className='absolute top-0 left-7 text-xs text-center h-[24px] w-[24px] bg-red-600 rounded-full text-white font-semibold '>{cartCount}</span>
+                    </div>
+                    <div>
                         <ModeToggle />
                     </div>
                 </div>
