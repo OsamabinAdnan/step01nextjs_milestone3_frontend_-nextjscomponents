@@ -63,15 +63,18 @@ export default function Navbar() {
                         ))}
                     </nav>
                     {/* Cart */}
-                    <div className=" relative">
-                        <Button onClick={() => handleCartClick()}>
-                            <ShoppingCart  className='text-lg '/>
-                        </Button>
-                        <span className='absolute top-0 left-7 text-xs text-center h-[24px] w-[24px] bg-red-600 rounded-full text-white font-semibold '>{cartCount}</span>
+                    <div className='flex justify-center items-center gap-4'>
+                        <div className=" relative">
+                            <Button onClick={() => handleCartClick()}>
+                                <ShoppingCart  className='text-lg '/>
+                            </Button>
+                            <span className='absolute top-0 left-7 text-xs text-center h-[24px] w-[24px] bg-red-600 rounded-full text-white font-semibold '>{cartCount}</span>
+                        </div>
+                        <div>
+                            <ModeToggle />
+                        </div>
                     </div>
-                    <div>
-                        <ModeToggle />
-                    </div>
+                    
                 </div>
             </header>
             {/* Spacer to prevent content from overlapping */}
